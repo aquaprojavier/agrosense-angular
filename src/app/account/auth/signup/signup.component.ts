@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { UntypedFormBuilder, UntypedFormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 
 import Swal from 'sweetalert2';
@@ -14,7 +14,7 @@ import { UserProfileService } from '../../../core/services/user.service';
 })
 export class SignupComponent implements OnInit {
 
-  signupForm: FormGroup;
+  signupForm: UntypedFormGroup;
   submitted = false;
   error = '';
   successmsg = false;
@@ -23,7 +23,7 @@ export class SignupComponent implements OnInit {
   year: number = new Date().getFullYear();
 
   // tslint:disable-next-line: max-line-length
-  constructor(private formBuilder: FormBuilder, private route: ActivatedRoute, private router: Router, private userService: UserProfileService) { }
+  constructor(private formBuilder: UntypedFormBuilder, private route: ActivatedRoute, private router: Router, private userService: UserProfileService) { }
 
   ngOnInit() {
     this.signupForm = this.formBuilder.group({

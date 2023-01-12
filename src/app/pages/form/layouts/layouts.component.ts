@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, Validators, FormGroup, FormBuilder } from '@angular/forms';
+import { FormControl, Validators, UntypedFormGroup, UntypedFormBuilder } from '@angular/forms';
 import { MyValidators } from 'src/app/utils/validators';
 
 
@@ -11,11 +11,11 @@ import { MyValidators } from 'src/app/utils/validators';
 export class LayoutsComponent implements OnInit {
 
 
-form: FormGroup;
+form: UntypedFormGroup;
 // bread crumb items
 breadCrumbItems: Array<{}>;
 
-constructor(private formBuilder: FormBuilder) {
+constructor(private formBuilder: UntypedFormBuilder) {
   this.buildForm();
  }
 

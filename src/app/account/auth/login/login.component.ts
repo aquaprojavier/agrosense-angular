@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { UntypedFormBuilder, UntypedFormGroup, Validators } from '@angular/forms';
 import {MatSnackBar} from '@angular/material/snack-bar';
 
 import { LoginService } from '../../../core/services/login.service';
@@ -16,7 +16,7 @@ import { ActivatedRoute, Router } from '@angular/router';
  */
 export class LoginComponent implements OnInit {
 
-  loginForm: FormGroup;
+  loginForm: UntypedFormGroup;
   submitted = false;
   error = '';
   returnUrl: string;
@@ -25,7 +25,7 @@ export class LoginComponent implements OnInit {
   year: number = new Date().getFullYear();
 
   // tslint:disable-next-line: max-line-length
-  constructor(private formBuilder: FormBuilder, 
+  constructor(private formBuilder: UntypedFormBuilder, 
               private route: ActivatedRoute, 
               private router: Router,
               private loginService:LoginService, 

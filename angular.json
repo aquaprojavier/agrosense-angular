@@ -34,7 +34,12 @@
               "src/styles.scss",
               "src/assets/scss/bootstrap-dark.scss",
               "src/assets/scss/app.scss",
-              "src/assets/scss/icons.scss"
+              "src/assets/scss/icons.scss",
+              "./node_modules/@fullcalendar/bootstrap/main.css",
+              "./node_modules/@fullcalendar/common/main.css",
+              "./node_modules/@fullcalendar/daygrid/main.css",
+              "./node_modules/@fullcalendar/timegrid/main.css",
+              "./node_modules/@fullcalendar/list/main.css"
             ],
             "scripts": [
               "src/assets/js/loadFillGauge.js"
@@ -139,7 +144,6 @@
       }
     }
   },
-  "defaultProject": "skote",
   "cli": {
     "analytics": false
   }
